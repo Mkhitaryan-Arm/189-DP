@@ -1,0 +1,299 @@
+  <!DOCTYPE html>
+  <html lang="hy">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Սամվել Գևորգյանի անվան թիվ 189 ավագ դպրոց</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Armenian:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+  :root{--bg:#ffffff;--soft:#f6fbff;--card:#fff;--ink:#1b2440;--mute:#62708f;--line:#e6eefb;
+  --c1:#3b82f6;--c2:#ec4899;--c3:#f59e0b;--c4:#10b981;--c5:#8b5cf6;--c6:#06b6d4;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+  html{color-scheme:light}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans Armenian",system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1100px;margin:auto;padding:0 20px}
+  #bar{position:fixed;top:0;left:0;height:5px;width:0;background:linear-gradient(90deg,var(--c3),var(--c2),var(--c5),var(--c1),var(--c4));z-index:60}
+  header{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;gap:10px;align-items:center;font-weight:800}
+  .logo i{width:40px;height:40px;border-radius:14px;background:linear-gradient(135deg,var(--c2),var(--c3));display:grid;place-items:center;color:#fff;font-style:normal;font-size:14px;animation:wob 3s infinite}
+  @keyframes wob{0%,100%{transform:rotate(0)}25%{transform:rotate(-10deg) scale(1.1)}75%{transform:rotate(10deg)}}
+  nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0;font-weight:600;font-size:15px}
+  nav ul a{padding:8px 13px;border-radius:99px;transition:.25s;display:inline-block}
+  nav ul li:nth-child(1) a:hover{background:var(--c1);color:#fff}nav ul li:nth-child(2) a:hover{background:var(--c2);color:#fff}nav ul li:nth-child(3) a:hover{background:var(--c3);color:#fff}nav ul li:nth-child(4) a:hover{background:var(--c4);color:#fff}nav ul li:nth-child(5) a:hover{background:var(--c5);color:#fff}
+  nav ul a:hover{transform:translateY(-3px) rotate(-3deg)}
+  #burger{display:none;background:none;border:2px solid var(--line);color:var(--ink);border-radius:10px;padding:6px 12px;font-size:18px}
+  /* hero */
+  .hero{position:relative;padding:70px 0 90px;overflow:hidden;background:linear-gradient(180deg,var(--soft),var(--bg))}
+  .fl{position:absolute;font-size:34px;animation:fly 8s ease-in-out infinite;opacity:.9;user-select:none}
+  @keyframes fly{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-28px) rotate(18deg)}}
+  .blob{position:absolute;border-radius:50%;filter:blur(45px);opacity:.45;animation:drift 10s ease-in-out infinite}
+  @keyframes drift{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(40px,-30px) scale(1.2)}}
+  .hero .grid{position:relative;display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:center}
+  .tag{display:inline-block;background:var(--c3);color:#fff;padding:6px 16px;border-radius:99px;font-size:13px;font-weight:800;animation:bounce 2s infinite}
+  @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+  h1{font-size:clamp(28px,5vw,50px);line-height:1.15;margin:14px 0;font-weight:800}
+  h1 span{background:linear-gradient(90deg,var(--c1),var(--c2),var(--c3));background-size:200%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 4s linear infinite}
+  @keyframes shine{to{background-position:200%}}
+  .type{color:var(--mute);font-size:18px;min-height:56px;max-width:520px}
+  .type::after{content:"|";animation:blink 1s infinite;color:var(--c2)}
+  @keyframes blink{50%{opacity:0}}
+  .btns{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:13px 26px;border-radius:16px;font:inherit;font-weight:800;border:3px solid var(--c1);color:var(--c1);cursor:pointer;transition:.25s;background:none}
+  .btn.p{background:linear-gradient(135deg,var(--c2),var(--c3));color:#fff;border-color:transparent;box-shadow:0 10px 24px rgba(236,72,153,.32)}
+  .btn:hover{transform:translateY(-4px) scale(1.06) rotate(-1deg)}
+  .hpic{aspect-ratio:1/1;max-width:380px;margin:auto;border-radius:42% 58% 55% 45%/50% 45% 55% 50%;animation:morph 8s ease-in-out infinite;border:6px solid #fff;box-shadow:0 18px 40px rgba(59,130,246,.25)}
+  @keyframes morph{0%,100%{border-radius:42% 58% 55% 45%/50% 45% 55% 50%}50%{border-radius:58% 42% 45% 55%/45% 55% 45% 55%}}
+  /* marquee */
+  .mq{background:linear-gradient(90deg,var(--c1),var(--c5),var(--c2),var(--c3));color:#fff;overflow:hidden;white-space:nowrap;padding:12px 0;font-weight:800;transform:rotate(-1deg);margin:-20px -10px 0}
+  .mq div{display:inline-block;animation:mqs 22s linear infinite}
+  @keyframes mqs{to{transform:translateX(-50%)}}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:-1px;padding:40px 0 10px}
+  .stat{border-radius:22px;padding:20px;text-align:center;color:#fff;transition:.3s}
+  .stat:hover{transform:translateY(-8px) rotate(-3deg) scale(1.05)}
+  .stat:nth-child(1){background:var(--c1)}.stat:nth-child(2){background:var(--c2)}.stat:nth-child(3){background:var(--c4)}.stat:nth-child(4){background:var(--c3)}
+  .stat b{font-size:36px;display:block;line-height:1.1}.stat span{font-size:14px;opacity:.95}
+  section{padding:60px 0}
+  .alt{background:var(--soft)}
+  h2{font-size:clamp(24px,3.5vw,34px);margin:0 0 8px;font-weight:800}
+  h2::after{content:"";display:block;width:70px;height:6px;border-radius:9px;margin-top:8px;background:linear-gradient(90deg,var(--c2),var(--c3));animation:grow 1.4s infinite alternate}
+  @keyframes grow{to{width:120px}}
+  .sub{color:var(--mute);margin:0 0 28px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+  .card{background:var(--card);border:2px solid var(--line);border-radius:24px;padding:24px;transition:.25s;position:relative;overflow:hidden}
+  .card::before{content:"";position:absolute;inset:0 0 auto 0;height:7px;background:var(--c)}
+  .card:hover{border-color:var(--c);box-shadow:0 14px 30px color-mix(in srgb,var(--c) 28%,transparent)}
+  .ic{font-size:36px;display:inline-block;transition:.35s}
+  .card:hover .ic{transform:scale(1.35) rotate(14deg)}
+  .card h3{margin:10px 0 6px;font-size:18px}.card p{margin:0;color:var(--mute);font-size:15px}
+  .rv{opacity:0;transform:translateY(34px) scale(.97);transition:.8s cubic-bezier(.2,.9,.3,1.2)}
+  .rv.in{opacity:1;transform:none}
+  /* flip cards */
+  .fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+  .flip{perspective:900px;height:200px;cursor:pointer}
+  .fi{position:relative;width:100%;height:100%;transition:transform .7s;transform-style:preserve-3d}
+  .flip:hover .fi,.flip.on .fi{transform:rotateY(180deg)}
+  .fi>div{position:absolute;inset:0;border-radius:24px;backface-visibility:hidden;display:grid;place-items:center;padding:20px;text-align:center;color:#fff}
+  .fi .bk{transform:rotateY(180deg);font-size:14.5px;background:var(--card)!important;color:var(--ink);border:3px solid var(--c)}
+  .fi .ft span{font-size:46px;display:block}.fi .ft b{font-size:18px}
+  /* image slots */
+  .slot{position:relative;aspect-ratio:4/3;border-radius:22px;border:3px dashed var(--c6);background:repeating-linear-gradient(45deg,color-mix(in srgb,var(--c6) 10%,var(--bg)),color-mix(in srgb,var(--c6) 10%,var(--bg)) 12px,var(--soft) 12px,var(--soft) 24px);display:grid;place-items:center;text-align:center;color:var(--mute);font-size:14px;overflow:hidden;transition:.3s}
+  .slot:hover{transform:scale(1.04) rotate(-1deg);border-color:var(--c2)}
+  .slot span{font-size:36px;display:block}
+  .slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;cursor:zoom-in}
+  .slot.has{border-style:solid;border-color:#fff;box-shadow:0 10px 26px rgba(0,0,0,.14)}
+  .gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+  .gal .slot:nth-child(odd){transform:rotate(-1.5deg)}.gal .slot:nth-child(even){transform:rotate(1.5deg)}
+  .gal .slot:hover{transform:scale(1.06) rotate(0)}
+  .wide{aspect-ratio:16/10}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+  /* slider */
+  .sl{border-radius:24px;overflow:hidden}.track{display:flex;transition:transform .7s}
+  .sd{min-width:100%;padding:36px;color:#fff;min-height:190px}
+  .sd:nth-child(1){background:linear-gradient(135deg,var(--c1),var(--c6))}.sd:nth-child(2){background:linear-gradient(135deg,var(--c2),var(--c3))}.sd:nth-child(3){background:linear-gradient(135deg,var(--c4),var(--c6))}
+  .sd h3{font-size:24px;margin:8px 0}
+  .dots{display:flex;gap:8px;justify-content:center;margin:14px 0}
+  .dots i{width:10px;height:10px;border-radius:50%;background:var(--line);cursor:pointer;transition:.3s}.dots i.on{background:var(--c2);width:30px;border-radius:6px}
+  table{width:100%;border-collapse:collapse;background:var(--card);border-radius:18px;overflow:hidden;border:2px solid var(--line)}
+  th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--line);font-size:15px}
+  th{background:linear-gradient(90deg,var(--c1),var(--c5));color:#fff}
+  tr.now td{background:color-mix(in srgb,var(--c3) 35%,transparent);font-weight:800}
+  .tw{overflow-x:auto}
+  .contact{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .ci{margin:0 0 10px}
+  .map{width:100%;aspect-ratio:16/10;border:0;border-radius:22px;margin-top:14px;background:var(--soft);box-shadow:0 8px 24px rgba(0,0,0,.12)}
+  form{display:grid;gap:12px;align-content:start}
+  input[type=text],input[type=email],textarea{width:100%;padding:13px 14px;border-radius:14px;border:3px solid var(--line);background:var(--card);color:var(--ink);font:inherit;transition:.2s}
+  input:focus,textarea:focus{outline:none;border-color:var(--c2);transform:scale(1.02)}
+  .soc{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+  .soc a{padding:10px 18px;border-radius:14px;color:#fff;font-weight:800;font-size:14px;transition:.25s}
+  .soc a:hover{transform:translateY(-5px) rotate(-4deg) scale(1.08)}
+  .fb{background:#1877f2}.ig{background:linear-gradient(45deg,#f59e0b,#e11d48,#7c3aed)}.yt{background:#ef4444}.tg{background:#229ed9}
+  #fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:45;display:flex;flex-direction:column;gap:10px}
+  #fab a,#fab button{width:52px;height:52px;border-radius:50%;border:none;color:#fff;font-weight:800;font-size:22px;display:grid;place-items:center;cursor:pointer;box-shadow:0 6px 16px rgba(0,0,0,.25)}
+  #fab a{background:#1877f2;animation:pls 2.4s infinite}
+  #fab button{background:var(--c3);opacity:0;pointer-events:none;transition:.3s}#fab button.show{opacity:1;pointer-events:auto}
+  @keyframes pls{0%{box-shadow:0 0 0 0 rgba(24,119,242,.6)}70%{box-shadow:0 0 0 18px rgba(24,119,242,0)}100%{box-shadow:0 0 0 0 transparent}}
+  #lb{position:fixed;inset:0;background:rgba(10,15,35,.88);z-index:80;display:none;place-items:center;padding:20px;cursor:zoom-out}
+  #lb.on{display:grid;animation:pop .3s}#lb img{max-width:100%;max-height:90%;border-radius:18px}
+  @keyframes pop{from{opacity:0;transform:scale(.9)}}
+  .cf{position:fixed;pointer-events:none;z-index:90;font-size:22px;animation:cf 1.2s ease-out forwards}
+  @keyframes cf{to{transform:translate(var(--x),var(--y)) rotate(540deg);opacity:0}}
+  footer{padding:30px 0;background:linear-gradient(90deg,var(--c1),var(--c5),var(--c2));color:#fff;text-align:center;font-size:14px}
+  @media(max-width:760px){
+  #burger{display:block}
+  nav ul{display:none;position:absolute;top:64px;left:0;right:0;background:var(--bg);flex-direction:column;padding:14px 20px;border-bottom:1px solid var(--line)}nav ul.open{display:flex}
+  .hero .grid,.contact,.split{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.hpic{max-width:260px}
+  }
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+  </style>
+  </head>
+  <body>
+  <div id="bar"></div>
+  <header><div class="wrap"><nav>
+  <a href="#top" class="logo"><i>189</i><span>Դպրոց №189</span></a>
+  <button id="burger" aria-label="Մենյու">☰</button>
+  <ul id="menu">
+  <li><a href="#about">Մեր մասին</a></li><li><a href="#programs">Ուսուցում</a></li><li><a href="#gallery">Պատկերասրահ</a></li><li><a href="#news">Նորություններ</a></li><li><a href="#contact">Կապ</a></li>
+  </ul></nav></div></header>
+
+  <main id="top">
+  <div class="hero">
+  <div class="blob" style="width:260px;height:260px;background:var(--c3);top:-50px;right:6%"></div>
+  <div class="blob" style="width:240px;height:240px;background:var(--c6);bottom:-60px;left:4%;animation-delay:-4s"></div>
+  <div class="blob" style="width:200px;height:200px;background:var(--c2);top:35%;left:48%;animation-delay:-7s"></div>
+  <span class="fl" style="left:4%;top:18%">✏️</span><span class="fl" style="left:42%;top:8%;animation-delay:-2s">📚</span><span class="fl" style="right:5%;top:50%;animation-delay:-4s">⭐</span><span class="fl" style="left:8%;bottom:10%;animation-delay:-5s">🎒</span><span class="fl" style="right:30%;bottom:6%;animation-delay:-1s">🔬</span>
+  <div class="wrap grid">
+  <div>
+  <span class="tag">🎉 Բարի գալուստ</span>
+  <h1>Սամվել Գևորգյանի անվան <span>թիվ 189</span> ավագ դպրոց</h1>
+  <div class="type" id="type"></div>
+  <div class="btns"><a class="btn p" href="#contact" data-conf>Դիմել հիմա 🚀</a><a class="btn" href="#gallery">Տեսնել նկարները</a></div>
+  </div>
+  <div><div class="slot hpic" data-img="hero"><div><span></span><img src="https://avatars.mds.yandex.net/get-altay/15278128/2a00000196d05825057e87013dd7a7591151/L_height" alt=""></div></div></div>
+  </div></div>
+  <div class="mq"><div id="mq"></div></div>
+  <div class="wrap"><div class="stats">
+  <div class="stat"><b data-n="1000">0</b><span>սովորողներ</span></div>
+  <div class="stat"><b data-n="80">0</b><span>մանկավարժներ</span></div>
+  <div class="stat"><b data-n="12">0</b><span>դասարան</span></div>
+  <div class="stat"><b data-n="15">0</b><span>խմբակ</span></div>
+  </div></div>
+
+  <section id="about"><div class="wrap"><div class="split">
+  <div class="rv">
+  <h2>Մեր մասին</h2>
+  <p class="sub">Դպրոցը, որտեղ ամեն սովորողի տաղանդը գտնում է իր ճանապարհը։</p>
+  <div class="cards" style="grid-template-columns:1fr">
+  <div class="card" style="--c:var(--c1)"><div class="ic">🎯</div><h3>Առաքելություն</h3><p>Ձևավորել կրթված, ստեղծագործ և հայրենասեր քաղաքացիներ։</p></div>
+  <div class="card" style="--c:var(--c2)"><div class="ic">💡</div><h3>Արժեքներ</h3><p>Հարգանք, ազնվություն, հետաքրքրասիրություն և համագործակցություն։</p></div>
+  </div></div>
+  <div class="rv"><div class="slot wide" data-img="about"><div><span>📷</span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvy4EnoQkKiyhx6u9PB1KgVqhqn1wTEWC42dbIbCm72lhfY-buFHk41MY&s=10" alt=""></div></div></div>
+  </div></div></section>
+
+  <section id="programs" class="alt"><div class="wrap">
+  <h2 class="rv">Ուսուցում և խմբակներ</h2>
+  <p class="sub rv">Սեղմեք կամ մոտեցրեք կուրսորը քարտին 👆</p>
+  <div class="fgrid rv">
+  <div class="flip"><div class="fi"><div class="ft" style="background:var(--c1)"><div><span>🔬</span><b>Բնագիտական</b></div></div><div class="bk" style="--c:var(--c1)">Մաթեմատիկա, ֆիզիկա, քիմիա, կենսաբանություն՝ լաբորատոր աշխատանքներով։</div></div></div>
+  <div class="flip"><div class="fi"><div class="ft" style="background:var(--c2)"><div><span>📚</span><b>Հումանիտար</b></div></div><div class="bk" style="--c:var(--c2)">Հայոց լեզու, գրականություն, պատմություն, օտար լեզուներ, բանավեճ։</div></div></div>
+  <div class="flip"><div class="fi"><div class="ft" style="background:var(--c4)"><div><span>💻</span><b>Ինֆորմատիկա</b></div></div><div class="bk" style="--c:var(--c4)">Ծրագրավորում, ռոբոտաշինություն, վեբ-դիզայն։</div></div></div>
+  <div class="flip"><div class="fi"><div class="ft" style="background:var(--c3)"><div><span>🎨</span><b>Արվեստ և սպորտ</b></div></div><div class="bk" style="--c:var(--c3)">Երաժշտություն, պար, կերպարվեստ, շախմատ, ֆուտբոլ։</div></div></div>
+  </div></div></section>
+  <!-- 
+  <section id="gallery"><div class="wrap">
+  <h2 class="rv">Պատկերասրահ</h2>
+  <p class="sub rv">Սեղմեք նկարի վրա՝ մեծացնելու համար 🔍</p>
+  <div class="gal rv">
+  <div class="slot" data-img="g1"><div><span>🏫</span>Դպրոցի շենք</div></div>
+  <div class="slot" data-img="g2"><div><span>🎓</span>Միջոցառումներ</div></div>
+  <div class="slot" data-img="g3"><div><span>⚽</span>Սպորտ</div></div>
+  <div class="slot" data-img="g4"><div><span>🔬</span>Լաբորատորիա</div></div>
+  <div class="slot" data-img="g5"><div><span>🎭</span>Արվեստ</div></div>
+  <div class="slot" data-img="g6"><div><span>👩‍🏫</span>Մանկավարժներ</div></div>
+  </div></div></section> -->
+
+  <section id="news" class="alt"><div class="wrap">
+  <h2 class="rv">Նորություններ</h2>
+  <p class="sub rv">Դպրոցական կյանքի վերջին իրադարձությունները։</p>
+  <div class="sl rv"><div class="track" id="track">
+  <div class="sd"><small>Սեպտեմբեր</small><h3>📣 Գիտելիքի օր</h3><p>Նոր ուսումնական տարին մեկնարկեց հանդիսավոր միջոցառմամբ։</p></div>
+  <div class="sd"><small>Հոկտեմբեր</small><h3>🍎 Ուսուցչի օր</h3><p>Աշակերտները շնորհավորեցին իրենց սիրելի ուսուցիչներին։</p></div>
+  <div class="sd"><small>Շուտով</small><h3>🏆 Օլիմպիադա</h3><p>Դպրոցական փուլի օլիմպիադաներ հիմնական առարկաներից։</p></div>
+  </div></div>
+  <div class="dots" id="dots"><i class="on"></i><i></i><i></i></div>
+  <div style="text-align:center"><a class="btn p" data-link="fb" target="_blank" rel="noopener">Ավելին՝ Facebook-ում 👍</a></div>
+  <h3 class="rv" style="margin-top:44px">🔔 Զանգերի գրաֆիկ</h3>
+  <div class="tw rv"><table id="tb">
+  <tr><th>Դաս</th><th>Սկիզբ</th><th>Ավարտ</th></tr>
+  <tr><td>1</td><td>08:15</td><td>09:00</td></tr><tr><td>2</td><td>09:05</td><td>09:50</td></tr>
+  <tr><td>3</td><td>10:00</td><td>10:45</td></tr><tr><td>4</td><td>11:00</td><td>11:45</td></tr><tr><td>5</td><td>11:50</td><td>12:35</td></tr>
+  <tr></tr><td>6</td><td>12:40</td><td>13:25</td></tr><tr><td>7</td><td>13:30</td><td>14:15</td></tr>
+  </table></div>
+  </div></section>
+
+  <section id="contact"><div class="wrap">
+  <h2 class="rv">Կապ մեզ հետ</h2>
+  <p class="sub rv">Գրեք մեզ՝ հարցերի և դիմումների համար։</p>
+  <div class="contact rv">
+  <div>
+  <p class="ci">📍 <b>Հասցե՝</b> <span id="addr">Երևան, Հայաստան</span></p>
+  <p class="ci">📞 <b>Հեռ.՝</b> +374 ·· ·· ·· ··</p>
+  <p class="ci">✉️ <b>Էլ. փոստ՝</b> info@school189.am</p>
+  <p class="ci">🕘 <b>Ժամեր՝</b> Երկ–Ուրբ, 08:15–14:15</p>
+  <div class="soc"><a class="fb" data-link="fb" target="_blank" rel="noopener">Facebook</a><a class="ig" data-link="ig" target="_blank" rel="noopener">Instagram</a><a class="yt" data-link="yt" target="_blank" rel="noopener">YouTube</a><a class="tg" data-link="tg" target="_blank" rel="noopener">Telegram</a></div>
+  <div id="mapbox"></div>
+  </div>
+  <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Շնորհակալություն ✓';boom(innerWidth/2,innerHeight/2)">
+  <input type="text" placeholder="Անուն Ազգանուն" required>
+  <input type="email" placeholder="Էլ. փոստ" required>
+  <textarea rows="6" placeholder="Ձեր հաղորդագրությունը"></textarea>
+  <button class="btn p" type="submit">Ուղարկել ✉️</button>
+  </form></div></div></section>
+  </main>
+
+  <div id="fab"><button id="up" aria-label="Վերև">↑</button><a data-link="fb" target="_blank" rel="noopener" aria-label="Facebook">f</a></div>
+  <div id="lb"><img alt=""></div>
+  <footer><div class="wrap">© 2026 Սամվել Գևորգյանի անվան թիվ 189 ավագ դպրոց 💙</div></footer>
+
+  <script>
+  /* ======================= ԿԱՐԳԱՎՈՐՈՒՄՆԵՐ — ԱՅՍՏԵՂ ՓՈԽԵՔ ======================= */
+  const CONFIG = {
+    // Սոցիալական էջերի հղումներ (տեղադրեք ձեր իրական հղումները)
+    links: {
+      fb: "https://www.facebook.com/",
+      ig: "https://www.instagram.com/",
+      yt: "https://www.youtube.com/",
+      tg: "https://t.me/"
+    },
+    // Google Maps՝ Maps → Share → Embed a map → պատճենեք src="..." հղումը
+    mapEmbed: "",
+    mapLink: "https://www.google.com/maps/search/?api=1&query=Yerevan+school+189",
+    // Նկարներ. տեղադրեք նկարի հղումը կամ data:image/... կոդը ակոսների մեջ
+    // (դատարկ "" = ցուցադրվում է դատարկ վանդակ)
+    images: {
+      hero:  "",
+      about: "",
+      g1: "", g2: "", g3: "", g4: "", g5: "", g6: ""
+    }
+  };
+  /* ============================================================================ */
+  const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+  // links
+  $$('[data-link]').forEach(a=>a.href=CONFIG.links[a.dataset.link]);
+  // images
+  $$('[data-img]').forEach(s=>{const u=CONFIG.images[s.dataset.img];if(!u)return;const im=new Image();im.onload=()=>{s.innerHTML='';s.appendChild(im);s.classList.add('has');im.onclick=()=>{$('#lb img').src=u;$('#lb').classList.add('on')}};im.src=u});
+  $('#lb').onclick=()=>$('#lb').classList.remove('on');
+  // map
+  (function(){const b=$('#mapbox');if(CONFIG.mapEmbed){b.innerHTML='<iframe class="map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>';b.firstChild.src=CONFIG.mapEmbed}
+  b.insertAdjacentHTML('beforeend','<a class="btn" style="margin-top:12px" target="_blank" rel="noopener" href="'+CONFIG.mapLink+'">📍 Բացել Google Maps-ում</a>')})();
+  // menu
+  const m=$('#menu');$('#burger').onclick=()=>m.classList.toggle('open');$$('#menu a').forEach(a=>a.onclick=()=>m.classList.remove('open'));
+  // progress + up
+  addEventListener('scroll',()=>{const h=document.documentElement;$('#bar').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';$('#up').classList.toggle('show',h.scrollTop>500)});
+  $('#up').onclick=()=>scrollTo({top:0,behavior:'smooth'});
+  // reveal + counters
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});$$('.rv').forEach(e=>io.observe(e));
+  $$('[data-n]').forEach(el=>{const n=+el.dataset.n;let c=0;const t=setInterval(()=>{c+=Math.ceil(n/50);if(c>=n){c=n;clearInterval(t)}el.textContent=c+(n>=80?'+':'')},30)});
+  // typing
+  (function(){const L=['Ժամանակակից կրթություն 📘','Ուրախ և հոգատար միջավայր 🌈','Գիտելիք՝ ապագայի համար 🚀'];let i=0,j=0,d=0;const el=$('#type');
+  (function tick(){const s=L[i];j+=d?-1:1;el.textContent=s.slice(0,j);let w=d?35:70;if(!d&&j==s.length){d=1;w=1600}else if(d&&j==0){d=0;i=(i+1)%L.length;w=300}setTimeout(tick,w)})()})();
+  // marquee
+  $('#mq').innerHTML=Array(8).fill('🎒 Գիտելիք &nbsp;•&nbsp; 🔬 Գիտություն &nbsp;•&nbsp; 🎨 Արվեստ &nbsp;•&nbsp; ⚽ Սպորտ &nbsp;•&nbsp; 💻 Տեխնոլոգիա &nbsp;•&nbsp;').join('');
+  // flip on tap
+  $$('.flip').forEach(f=>f.onclick=()=>f.classList.toggle('on'));
+  // slider
+  let k=0;const dots=$$('#dots i');function go(n){k=(n+3)%3;$('#track').style.transform=`translateX(-${k*100}%)`;dots.forEach((d,i)=>d.classList.toggle('on',i==k))}
+  dots.forEach((d,i)=>d.onclick=()=>go(i));setInterval(()=>go(k+1),5000);
+  // confetti
+  function boom(x,y){const E=['🎉','⭐','💙','✨','🎈','🌈'];for(let i=0;i<18;i++){const s=document.createElement('span');s.className='cf';s.textContent=E[i%E.length];s.style.left=x+'px';s.style.top=y+'px';s.style.setProperty('--x',(Math.random()*300-150)+'px');s.style.setProperty('--y',(Math.random()*-260-30)+'px');document.body.appendChild(s);setTimeout(()=>s.remove(),1300)}}
+  $$('[data-conf]').forEach(b=>b.addEventListener('click',e=>boom(e.clientX,e.clientY)));
+  $$('.stat').forEach(s=>s.addEventListener('click',e=>boom(e.clientX,e.clientY)));
+  // current lesson
+  (function(){const n=new Date(),v=n.getHours()*60+n.getMinutes(),p=s=>{const a=s.split(':');return +a[0]*60+ +a[1]};$$('#tb tr').slice(1).forEach(r=>{if(v>=p(r.cells[1].textContent)&&v<=p(r.cells[2].textContent))r.classList.add('now')})})();
+  </script>
+  </body>
+  </html>
